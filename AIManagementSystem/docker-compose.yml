@@ -11,6 +11,8 @@ services:
       - "5000:5000"
     environment:
       - ENV=development
+    container_name: model_training
+    command: python app.py
 
   model_evaluation:
     build:
@@ -22,6 +24,8 @@ services:
       - "5001:5000"
     environment:
       - ENV=development
+    container_name: model_evaluation
+    command: python app.py
 
   model_deployment:
     build:
@@ -33,6 +37,8 @@ services:
       - "5002:5000"
     environment:
       - ENV=development
+    container_name: model_deployment
+    command: python app.py
 
   model_monitoring:
     build:
@@ -44,6 +50,8 @@ services:
       - "5003:5000"
     environment:
       - ENV=development
+    container_name: model_monitoring
+    command: python app.py
 
 networks:
   default:

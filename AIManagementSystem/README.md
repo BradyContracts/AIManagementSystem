@@ -47,6 +47,14 @@ To run the model training service, you can use Docker:
    docker run model_training
    ```
 
+3. Alternatively, you can use Docker Compose:
+   Add the following configuration to your `docker-compose.yml` file:
+   ```yaml
+   model_training:
+     build:
+       context: ./services/model_training
+   ```
+
 ### CI/CD
 The project includes a CI/CD pipeline defined in `.github/workflows/ci-cd.yml`. This pipeline automates the build, test, and deployment processes.
 

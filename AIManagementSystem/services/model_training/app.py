@@ -3,11 +3,13 @@ import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
 import joblib
+import sys
 
 app = Flask(__name__)
 
 @app.route('/train', methods=['POST'])
 def train_model():
+    print("Training model...")
     data = request.json
     df = pd.DataFrame(data)
 
