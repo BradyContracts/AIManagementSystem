@@ -1,0 +1,50 @@
+version: '3.8'
+
+services:
+  model_training:
+    build:
+      context: ./services/model_training
+      dockerfile: Dockerfile
+    volumes:
+      - ./services/model_training:/app
+    ports:
+      - "5000:5000"
+    environment:
+      - ENV=development
+
+  model_evaluation:
+    build:
+      context: ./services/model_evaluation
+      dockerfile: Dockerfile
+    volumes:
+      - ./services/model_evaluation:/app
+    ports:
+      - "5001:5000"
+    environment:
+      - ENV=development
+
+  model_deployment:
+    build:
+      context: ./services/model_deployment
+      dockerfile: Dockerfile
+    volumes:
+      - ./services/model_deployment:/app
+    ports:
+      - "5002:5000"
+    environment:
+      - ENV=development
+
+  model_monitoring:
+    build:
+      context: ./services/model_monitoring
+      dockerfile: Dockerfile
+    volumes:
+      - ./services/model_monitoring:/app
+    ports:
+      - "5003:5000"
+    environment:
+      - ENV=development
+
+networks:
+  default:
+    driver: bridge
