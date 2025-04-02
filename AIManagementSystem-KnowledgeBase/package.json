@@ -1,0 +1,32 @@
+{
+  "name": "AIManagementSystem-KnowledgeBase",
+  "version": "1.0.0",
+  "description": "A knowledge management system for AI-related information.",
+  "main": "src/index.ts",
+  "scripts": {
+    "start": "ts-node src/index.ts",
+    "build": "tsc",
+    "test": "jest"
+  },
+  "dependencies": {
+    "typescript": "^4.5.0",
+    "ts-node": "^10.0.0",
+    "jest": "^27.0.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^27.0.0",
+    "@types/node": "^16.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/AIManagementSystem-KnowledgeBase.git"
+  },
+  "keywords": [
+    "AI",
+    "knowledge",
+    "management",
+    "system"
+  ],
+  "author": "Your Name",
+  "license": "MIT"
+}
