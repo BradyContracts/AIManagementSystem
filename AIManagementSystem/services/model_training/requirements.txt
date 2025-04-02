@@ -1,8 +1,4 @@
+flask
 numpy
 pandas
 scikit-learn
-tensorflow
-torch
-matplotlib
-seaborn
-joblib

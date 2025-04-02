@@ -7,6 +7,10 @@ import sys
 
 app = Flask(__name__)
 
+@app.route("/")
+def home():
+    return "Welcome to the Model Training Service!"
+
 @app.route('/train', methods=['POST'])
 def train_model():
     print("Training model...")
